@@ -101,19 +101,23 @@ class _MyAppState extends State<MyApp> {
   }
   stateButton({stateName}){
     return
-      FlatButton(
-        child:Text(stateName,style:TextStyle(fontSize: 28,color: Colors.black),) ,
-        color:Colors.white,
-        padding: EdgeInsets.all(12.0),
-        onPressed:(){
-          Conditions conditions=Conditions(stateName);
-          conditions.conditionFn(context);
-          } ,
+      Padding(
+        padding: const EdgeInsets.fromLTRB(30, 20, 30, 20),
+        child: FlatButton(
+          visualDensity: VisualDensity(horizontal: 0.5,vertical: 0.5),
+          child:Text(stateName,style:TextStyle(fontSize: 22,color: Colors.black),) ,
+          color:Colors.black45,
+          onPressed:(){
+            Conditions conditions=Conditions(stateName);
+            conditions.conditionFn(context);
+            } ,
+        ),
       );
   }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      themeMode: ThemeMode.system,
       debugShowCheckedModeBanner: false,
         home: Scaffold(
             drawer: Drawer(
@@ -143,12 +147,13 @@ class _MyAppState extends State<MyApp> {
                     },
                   ),
                 ])),
-            backgroundColor: Colors.black54,
+            backgroundColor: Colors.white,
             appBar: AppBar(
-              title:Center(child:Text("COVID-19 DASHBOARD")),
+              title:Text("Covid-19 Dashboard"),
+              centerTitle: true,
               elevation: 50.0,
-              backgroundColor: Colors.black,
-              bottom: PreferredSize(child:Text('State-Wise Database',style:TextStyle(fontSize: 20,color: Colors.lightGreen),), preferredSize: Size.fromHeight(70.0)),
+              backgroundColor: Colors.deepPurple,
+
             ),
             body:ListView(
                 children:

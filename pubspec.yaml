@@ -24,6 +24,7 @@ dependencies:
   animated_list_view_scroll: ^1.0.2
   url_launcher: ^5.4.5
   graphs: ^0.2.0
+  syncfusion_flutter_maps: ^19.2.47-beta
 
 
 
