@@ -25,6 +25,7 @@ dependencies:
   url_launcher: ^5.4.5
   graphs: ^0.2.0
   syncfusion_flutter_maps: ^19.2.47-beta
+  vertical_card_pager: ^1.4.0
 
 
 

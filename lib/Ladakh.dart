@@ -48,7 +48,7 @@ class _LadakhState extends State<Ladakh> {
         debugShowCheckedModeBanner: false,
 
         home: Scaffold(
-            appBar: AppBar(title:Text('DELHI',style:TextStyle(fontSize: 25,color: Colors.white,)),
+            appBar: AppBar(title:Text('LADAKH',style:TextStyle(fontSize: 25,color: Colors.white,)),
               backgroundColor: Colors.transparent,elevation: 0.0,
             ),
             extendBodyBehindAppBar: true,

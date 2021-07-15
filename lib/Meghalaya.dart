@@ -24,9 +24,9 @@ class _MeghalayaState extends State<Meghalaya> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][21]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][21]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][21]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][22]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][22]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][22]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

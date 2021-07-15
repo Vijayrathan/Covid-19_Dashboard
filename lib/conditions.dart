@@ -1,121 +1,375 @@
 import 'package:flutter/material.dart';
+import './baseClass.dart';
 
 class Conditions {
-final stateName;
-Conditions(this.stateName);
-void  conditionFn(context)async{
-  if(stateName=='Andaman and Nicobar Islands'){
-    await  Navigator.pushNamed(context,'andaman');
+  final stateName;
+
+  Conditions({this.stateName});
+
+  Map<String, int> stateId = {
+    'Andaman': 0,
+    'AP': 1,
+    'Arunachal': 2,
+    'Assam': 3,
+    'Bihar': 4,
+    'Chandigarh': 5,
+    'Chhattisgarh': 6,
+    'Dadar': 7,
+    'Delhi': 8,
+    'Goa': 9,
+    'GUJ': 10,
+    'Haryana': 11,
+    'Himachal': 12,
+    'J & K': 13,
+    'Jharkhand': 14,
+    'KTK': 15,
+    'KL': 16,
+    'Ladakh': 17,
+    'Lakshwadeep': 18,
+    'MP': 19,
+    'Maharashtra': 20,
+    'Manipur': 21,
+    'Megalaya': 22,
+    'Mizoram': 23,
+    'Nagaland': 24,
+    'Odisha': 25,
+    'Pondi': 26,
+    'Punjab': 27,
+    'RAJ': 28,
+    'Sikkim': 29,
+    'TN': 30,
+    'Telangana': 31,
+    'Tripura': 32,
+    'Uttarakhand': 33,
+    'UP': 34,
+    'WB': 35
+  };
+
+  Future<Widget> conditionFn(context) async {
+    if (stateName == 'Andaman') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'AP') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Arunachal') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Assam') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Bihar') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Chandigarh') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Chhattisgarh') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Dadar') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Delhi') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Goa') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'GUJ') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Haryana') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Himachal') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'J & K') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Jharkand') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'KTK') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'KL') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Ladakh') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Lakshwadeep') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'MP') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Maharashtra') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Manipur') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Megalaya') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Mizoram') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Nagaland') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Odisha') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Pondi') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Punjab') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'RAJ') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Sikkim') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'TN') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+                  stateName: stateName,
+                  stateId: stateId[stateName],
+                )),
+      );
+    } else if (stateName == 'Telangana') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Tripura') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'Uttarkhand') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'UP') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    } else if (stateName == 'WB') {
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+            builder: (context) => BaseCls(
+              stateName: stateName,
+              stateId: stateId[stateName],
+            )),
+      );
+    }
+  }
 }
-  else if(stateName=='Andhra Pradhesh'){
-    await Navigator.pushNamed(context, 'andhra');
-
-  }
-  else if(stateName=='Arunachal Pradesh'){
-    await Navigator.pushNamed(context, 'arunachal');
-
-  }
-  else if(stateName=='Assam'){
-    await Navigator.pushNamed(context, 'assam');
-
-  }
-  else if(stateName=='Bihar'){
-    await Navigator.pushNamed(context, 'bihar');
-
-  }
-  else if(stateName=='Chandigarh'){
-    await Navigator.pushNamed(context, 'chandigarh');
-
-  }
-  else if(stateName=='Chhattisgarh'){
-    await Navigator.pushNamed(context, 'chatisgarh');
-
-  }
-  else if(stateName=='Dadra and Nagar Haveli'){
-    await Navigator.pushNamed(context, 'dadranagar');
-  }
-  else if(stateName=='Delhi'){
-    await Navigator.pushNamed(context, 'delhi');
-  }
-  else if(stateName=='Goa'){
-    await Navigator.pushNamed(context, 'goa');
-  }
-  else if(stateName=='Gujarat'){
-    await Navigator.pushNamed(context, 'gujarat');
-  }
-  else if(stateName=='Haryana'){
-    await Navigator.pushNamed(context, 'haryana');
-  }
-  else if(stateName=='Himachal Pradesh'){
-    await Navigator.pushNamed(context, 'himachal');
-  }
-  else if(stateName=='Jammu & Kashmir'){
-    await Navigator.pushNamed(context, 'jammu');
-  }
-  else if(stateName=='Jharkhand'){
-    await Navigator.pushNamed(context, 'jharkhand');
-  }
-  else if(stateName=='Karnataka'){
-    await Navigator.pushNamed(context, 'karnataka');
-  }
-  else if(stateName=='Kerala'){
-    await Navigator.pushNamed(context, 'kerala');
-  }
-  else if(stateName=='Ladakh'){
-    await Navigator.pushNamed(context, 'ladakh');
-  }
-  else if(stateName=='Madhya Pradesh'){
-    await Navigator.pushNamed(context, 'madhya');
-  }
-  else if(stateName=='Maharashtra'){
-    await Navigator.pushNamed(context, 'maharashtra');
-  }
-  else if(stateName=='Manipur'){
-    await Navigator.pushNamed(context, 'manipur');
-  }
-  else if(stateName=='Meghalaya'){
-    await Navigator.pushNamed(context, 'meghalaya');
-  }
-  else if(stateName=='Mizoram'){
-    await Navigator.pushNamed(context, 'mizoram');
-  }
-  else if(stateName=='Nagaland'){
-    await Navigator.pushNamed(context, 'nagaland');
-  }
-  else if(stateName=='Odisha'){
-    await Navigator.pushNamed(context, 'odisha');
-  }
-  else if(stateName=='Puducherry'){
-    await Navigator.pushNamed(context, 'puducherry');
-  }
-  else if(stateName=='Punjab'){
-    await Navigator.pushNamed(context, 'punjab');
-  }
-  else if(stateName=='Rajasthan'){
-    await Navigator.pushNamed(context, 'rajasthan');
-  }
-  else if(stateName=='Sikkim'){
-    await Navigator.pushNamed(context, 'sikkim');
-  }
-  else if(stateName=='Tamil Nadu'){
-    await Navigator.pushNamed(context, 'tamilnadu');
-  }
-  else if(stateName=='Telangana'){
-    await Navigator.pushNamed(context, 'telangana');
-  }
-  else if(stateName=='Tripura'){
-    await Navigator.pushNamed(context, 'tripura');
-  }
-  else if(stateName=='Uttarkhand'){
-    await Navigator.pushNamed(context, 'uttarkhand');
-  }
-  else if(stateName=='Uttar pradesh'){
-    await Navigator.pushNamed(context, 'uttarp');
-  }
-  else if(stateName=='West Bengal'){
-    await Navigator.pushNamed(context, 'westbengal');
-  }
-
-}
-}
-

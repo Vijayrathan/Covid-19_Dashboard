@@ -24,9 +24,9 @@ class _MadhyaState extends State<Madhya> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][18]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][18]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][18]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][19]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][19]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][19]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

@@ -1,35 +1,42 @@
 import 'dart:convert';
-import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'dart:async';
 import './Design.dart';
+import './conditions.dart';
 
-class Tamilnadu extends StatefulWidget {
+
+ class BaseCls extends StatefulWidget {
+  BaseCls({this.stateName,this.stateId});
+  final stateName;
+  final stateId;
   @override
-  _TamilnaduState createState() => _TamilnaduState();
+  _BaseClsState createState() => _BaseClsState();
 }
 
-class _TamilnaduState extends State<Tamilnadu> {
+class _BaseClsState extends State<BaseCls> {
+
   var data;
   var decodedData;
   String deaths = '......';
   String confirmed = '.....';
   String discharged = '.....';
   Timer timer;
+  Conditions conditions=Conditions(stateName: null);
 
   Future<void> getData() async {
     http.Response response =
-        await http.get('https://api.rootnet.in/covid19-in/stats/latest');
+    await http.get('https://api.rootnet.in/covid19-in/stats/latest');
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
+    print(widget.stateId);
     String confirmedData =
-        decodedData['data']['regional'][30]['totalConfirmed'].toString();
+    decodedData['data']['regional'][widget.stateId]['totalConfirmed'].toString();
     String deathsData =
-        decodedData['data']['regional'][30]['deaths'].toString();
+    decodedData['data']['regional'][widget.stateId]['deaths'].toString();
     String dischargedData =
-        decodedData['data']['regional'][30]['discharged'].toString();
+    decodedData['data']['regional'][widget.stateId]['discharged'].toString();
     print(confirmedData);
     displayData(
         confirmedData: confirmedData,
@@ -51,7 +58,6 @@ class _TamilnaduState extends State<Tamilnadu> {
     getData();
     super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     Design design=Design(confirmed,discharged,deaths);
@@ -60,10 +66,11 @@ class _TamilnaduState extends State<Tamilnadu> {
         home: Scaffold(
             appBar: AppBar(
               centerTitle: true,
-              title: Text('TAMIL NADU',
+              title: Text('COVID STATS OF ${widget.stateName}',
                   style: TextStyle(
                     fontSize: 32,
                     color: Colors.white,
+                    fontStyle: FontStyle.italic
                   )),
               backgroundColor: Colors.transparent,
               elevation: 0.0,
@@ -76,3 +83,5 @@ class _TamilnaduState extends State<Tamilnadu> {
             )));
   }
 }
+
+

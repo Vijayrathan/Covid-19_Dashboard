@@ -24,9 +24,9 @@ class _SikkimState extends State<Sikkim> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][28]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][28]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][28]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][29]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][29]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][29]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

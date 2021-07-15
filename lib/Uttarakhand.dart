@@ -24,9 +24,9 @@ class _UttarkhandState extends State<Uttarkhand> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][32]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][32]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][32]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][33]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][33]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][33]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

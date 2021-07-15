@@ -24,9 +24,9 @@ class _WestbengalState extends State<Westbengal> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][34]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][34]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][34]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][35]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][35]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][35]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

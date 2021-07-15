@@ -24,9 +24,9 @@ class _MizoramState extends State<Mizoram> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][22]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][22]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][22]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][23]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][23]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][23]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

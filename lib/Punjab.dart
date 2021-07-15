@@ -24,9 +24,9 @@ class _PunjabState extends State<Punjab> {
     print(response.statusCode);
     data = response.body;
     decodedData = jsonDecode(data);
-    String confirmedData = decodedData['data']['regional'][26]['totalConfirmed'].toString();
-    String deathsData=decodedData['data']['regional'][26]['deaths'].toString();
-    String dischargedData=decodedData['data']['regional'][26]['discharged'].toString();
+    String confirmedData = decodedData['data']['regional'][27]['totalConfirmed'].toString();
+    String deathsData=decodedData['data']['regional'][27]['deaths'].toString();
+    String dischargedData=decodedData['data']['regional'][27]['discharged'].toString();
     print(confirmedData);
     displayData(confirmedData: confirmedData,death: deathsData,dischargedData: dischargedData);
   }

@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'dart:async';
+import'./Design.dart';
 class Andaman extends StatefulWidget {
 
   @override
@@ -44,66 +45,26 @@ class _AndamanState extends State<Andaman> {
   }
   @override
   Widget build(BuildContext context){
+    Design design=Design(confirmed,discharged,deaths);
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(title:Text('ANDAMAN & NICOBAR ISLANDS',style:TextStyle(fontSize: 25,color: Colors.white,)),
-          backgroundColor: Colors.transparent,elevation: 0.0,
-        ),
-        extendBodyBehindAppBar: true,
-        body:Container(decoration: BoxDecoration(
-            image:DecorationImage(
-              image:AssetImage('images/backgroundapp.jpg'),
-              colorFilter: ColorFilter.mode(
-                  Colors.white.withOpacity(0.8),BlendMode.dstATop),
-              fit: BoxFit.cover
-            )
-        ),
-
-            child: SafeArea(
-            child: Column(crossAxisAlignment: CrossAxisAlignment.stretch,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children:[Center(child:Container(child:Text('Total Confirmed Cases:$confirmed',style: TextStyle(color: Colors.white,fontSize: 25),),
-                  margin: EdgeInsets.all(25.0),
-                  decoration:BoxDecoration(
-                    color: Colors.black26,
-                    border: Border.all(width: 15,color: Colors.black26),
-                    borderRadius: BorderRadius.all(Radius.circular(15)),
-
-                  ),
-                )),
-                  Center(child:Container(child:Text('Total Death Cases:  $deaths',style: TextStyle(color: Colors.white,fontSize: 25),),
-                    margin: EdgeInsets.all(25.0),
-                    decoration:BoxDecoration(
-                      color:Colors.black26,
-                      border: Border.all(width: 15,color: Colors.black26),
-                        borderRadius: BorderRadius.all(Radius.circular(15))
-                    ),
+        debugShowCheckedModeBanner: false,
+        home: Scaffold(
+            appBar: AppBar(
+              centerTitle: true,
+              title: Text('ANDAMAN AND NICOBAR',
+                  style: TextStyle(
+                    fontSize: 32,
+                    color: Colors.white,
                   )),
-                  Center(child:Container(child:Text('Total Discharged Cases:$discharged',style: TextStyle(color: Colors.white,fontSize: 25),),
-                    margin: EdgeInsets.all(25.0),
-                    decoration:BoxDecoration(
-                      color:Colors.black26,
-                      border: Border.all(width: 15,color: Colors.black26),
-                        borderRadius: BorderRadius.all(Radius.circular(15))
+              backgroundColor: Colors.transparent,
+              elevation: 0.0,
 
-                    ),
-                  )),
-                  Row(children:[Container(
-                      child: IconButton (
-                          icon:Icon(Icons.arrow_back),
-                          color: Colors.pinkAccent,
-                          onPressed:(){ Navigator.pushNamed(context,'first');}
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.black26,
-                      shape: BoxShape.circle
-                    ),
-                  )
-                  ])
-        ])
-    )))
-      );
+            ),
+            extendBodyBehindAppBar: true,
+            body: Padding(
+              padding: EdgeInsets.all(1),
+              child:design.design() ,
+            )));
   }
 }
 
