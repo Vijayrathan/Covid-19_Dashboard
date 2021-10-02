@@ -1,16 +1,7 @@
-# databoard
+# COVID DASHBOARD
 
-A new Flutter application.
+“COVID-19 Dashboard” app to provide day-day status and news feed of virus spread across India.
 
-## Getting Started
+It has a map UI which when clicked on a particular state on the map displays the Covid-19 statistics of that particular state.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+It also shows the symptoms and preventive measures of Covid-19 by a interactive UI.
